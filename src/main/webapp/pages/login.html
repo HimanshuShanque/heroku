@@ -1,0 +1,31 @@
+<div class="container">
+<div class="login left" ng-init="initLoginPage()">
+    
+    <div ng-if="loginPageToShow">
+		    <input type="text" placeholder="Username" id="username" ng-model="user.userName">  
+		  	<input type="password" placeholder="password" id="password" ng-model="user.password">  
+		  <a href="" class="forgot">forgot password?</a>
+		  <input type="submit" value="Sign In" ng-click="login(user)">
+		  <a ng-click="SignUp()" class="forgot">New User SignUp</a>
+  	</div>
+	
+  	<div ng-if="registerPageToShow">
+		    <input type="text" placeholder="Username" id="username" ng-model="user1.userName">
+		    <input type="text" placeholder="Full Name" id="fullname" ng-model="user1.fullName">
+		    <input type="text" placeholder="Email" id="email" ng-model="user1.email">
+		    <input type="text" placeholder="Address" id="Address" ng-model="user1.address">
+		    <input type="text" placeholder="Mobile No(max 10 digits)" id="phno" ng-model="user1.phno">  
+		  	<input type="password" placeholder="password" id="password" ng-model="user1.password">  
+		  
+		  <input ng-style="" type="submit" value="SignUp" ng-click="signUpUser(user1)">
+		  <a ng-click="initLoginPage()" class="forgot">Back to login page</a>
+		  
+  	</div>
+  	
+</div>
+<div class="right">
+
+{{masterDto.errorMsg}}</div>
+
+
+</div>
